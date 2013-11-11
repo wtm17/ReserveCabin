@@ -8,12 +8,12 @@ class UrlMappings {
         }
 
         "/" {
-            controller = "index"
+            controller = "ReserveCabin"
             action = "index"
         }
 
         "/index.gsp" {
-            controller = "index"
+            controller = "ReserveCabin"
             action = "index"
         }
     }

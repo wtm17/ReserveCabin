@@ -1,15 +1,13 @@
 (function (angular) {
     'use strict';
 
-    var ngModule = angular.module('reservecabin', ['reservecabin.main']),
+    var ngModule = angular.module('ReserveCabin', ['ReserveCabin.SearchCtrl']),
         cacheBustSuffix = new Date().getTime();
-
-    ngModule.constant('cacheBustSuffix', cacheBustSuffix);
 
     // configure routing
     ngModule.config(['$routeProvider', function ($routeProvider) {
         // default route:
-        $routeProvider.when('/', {templateUrl: 'index.html?cache-bust=' + cacheBustSuffix, controller: 'MainCtrl'});
+        $routeProvider.when('/', {templateUrl: 'angularjs/search/search.html?cache-bust=' + cacheBustSuffix, controller: 'SearchCtrl'});
         $routeProvider.otherwise({redirectTo: '/'});
     }]);
 
